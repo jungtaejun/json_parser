@@ -1,4 +1,4 @@
-[
+const works = [
   {
     "url": "/public_assets/work/work_building.png",
     "title": "한국건설기술연구원",
