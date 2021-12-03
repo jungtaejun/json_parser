@@ -2,16 +2,22 @@ $(document).ready(function(){
   console.log(works)
 
   var html =[];
-
-    for(var i = 0; i < works.length; i++) {
-      html.push(works[i].category + ' ');
-      html.push(works[i].title + ' ');
-      html.push(works[i].subTitle + ' ');
-      html.push(works[i].all + ' ');
-      html.push(works[i].url + ' ');
-      html.push('<br>')
-      html.push('<br>')
+  var i=0;
+  for(var work of works) {
+    if(i%2 === 0){
+      html.push('<div class="row">')
     }
-    $('.data').html(html.join(''));
+    else {
+      html.push('<div class="row bg-gray">')
+    }
+    html.push('<div class="col-1">' + work.category + '</div>')
+    html.push('<div class="col-3">' + work.title + '</div>')
+    html.push('<div class="col-4">' + work.subTitle + '</div>')
+    html.push('<div class="col-1">' + work.all + '</div>')
+    html.push('<div class="col-3">' + work.utl + '</div>')
+    html.push('</div>')
+    i++
+  }
+  $('.data').html(html.join(''))
 });
 
