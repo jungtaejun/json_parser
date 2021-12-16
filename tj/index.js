@@ -20,11 +20,15 @@ $(document).ready(function(){
   
   for(var j=0; j < works.length; j++) {
     var work = works[j]
-    // html.push(makeList(j, work))
+    var el = makeList(j, work)
+    html.push(el)
   }
   
   for (var key in works) {
     var work = works[key]
+    for(var key2 in work) {
+      console.log(key2)
+    }
     html.push(makeList(key, work))
   }
 
@@ -35,5 +39,11 @@ $(document).ready(function(){
     i++
   }
   $('.data').html(html.join(''))
+  var arr = []
+  arr.push('안')
+  arr.push('상')
+  arr.push('현')
+  console.log(arr.join(''))//안/상/현 
+
 });
 
