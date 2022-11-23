@@ -1,6 +1,21 @@
 function makeList(index, work) {
   var element = []
-
+  // switch (index) {
+  //   case 0:
+  //     a()
+  //     break;
+  //   case 1:
+  //     b()
+  //     break;
+  //   case 2:
+  //   case 3:
+  //   case 4:
+  //     c()
+  //     break;
+  //   default:
+  //     z()
+  //     break;
+  // }
   if(index % 2 === 0){
     element.push('<div class="row">')
   } else {
@@ -45,5 +60,7 @@ $(document).ready(function(){
   arr.push('현')
   console.log(arr.join(''))//안/상/현 
 
+
+  
 });
 
