@@ -1,7 +1,27 @@
 function makeList(index, work) {
   var element = []
+<<<<<<< HEAD
 
   if(index % 2 === 0) {
+=======
+  // switch (index) {
+  //   case 0:
+  //     a()
+  //     break;
+  //   case 1:
+  //     b()
+  //     break;
+  //   case 2:
+  //   case 3:
+  //   case 4:
+  //     c()
+  //     break;
+  //   default:
+  //     z()
+  //     break;
+  // }
+  if(index % 2 === 0){
+>>>>>>> 2b4e2c6adbcaca4194cd1b07f60e01d957cf423d
     element.push('<div class="row">')
   } else {
     element.push('<div class="row bg-gray">')
@@ -20,13 +40,21 @@ $(document).ready(function(){
   
   for(var j=0; j < works.length; j++) {
     var work = works[j]
-    // html.push(makeList(j, work))
+    var el = makeList(j, work)
+    html.push(el)
   }
   
   for (var key in works) {
     var work = works[key]
+<<<<<<< HEAD
     var el = makeList(key, work)
     html.push(el)
+=======
+    for(var key2 in work) {
+      console.log(key2)
+    }
+    html.push(makeList(key, work))
+>>>>>>> 2b4e2c6adbcaca4194cd1b07f60e01d957cf423d
   }
 
   var i=0;
@@ -36,5 +64,13 @@ $(document).ready(function(){
     i++
   }
   $('.data').html(html.join(''))
+  var arr = []
+  arr.push('안')
+  arr.push('상')
+  arr.push('현')
+  console.log(arr.join(''))//안/상/현 
+
+
+  
 });
 
